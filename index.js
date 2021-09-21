@@ -54,6 +54,10 @@ for(btn of buttons) {
             });
 
             document.body.appendChild(ul);
+        } else if(buttonVal === "<-") {
+            //backspace
+            displayValue = displayValue.slice(0, displayValue.length -1);
+            display.value = displayValue;
         } else {
             displayValue += buttonVal;
             display.value = displayValue;
