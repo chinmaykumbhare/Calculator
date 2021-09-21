@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 style="font-family: 'Luckiest Guy', cursive; font-size: 36px; margin: 0;">Calculator</h2>
+        <div class="calculator">
+            <input type="text" name="display" id="display">
+            <table>
+                <tr>
+                    <td><button>7</button></td>
+                    <td><button>8</button></td>
+                    <td><button>9</button></td>
+                    <td><button>*</button></td>
+                </tr>
+                <tr>
+                    <td><button>4</button></td>
+                    <td><button>5</button></td>
+                    <td><button>6</button></td>
+                    <td><button>-</button></td>
+                </tr>
+                <tr>
+                    <td><button>1</button></td>
+                    <td><button>2</button></td>
+                    <td><button>3</button></td>
+                    <td><button>+</button></td>
+                </tr>
+                <tr>
+                    <td><button>/</button></td>
+                    <td><button>0</button></td>
+                    <td><button>^</button></td>
+                    <td><button>=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button style="width: 196px;">C</button></td>
+                    <td colspan="2"><button style="width: 196px;">LOGS</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="history">
+        <hr>
+        <h3>History:</h3>
+        <ul id="displayHistory">
+            <p style="color: white; background: red; width: 200px; text-align: center;">No Data To Display</p>
+        </ul>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
