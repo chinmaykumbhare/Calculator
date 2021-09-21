@@ -1,3 +1,4 @@
+//variables
 let display = document.getElementById("display");
 buttons = document.querySelectorAll("button");
 let displayValue = "";
@@ -5,24 +6,15 @@ let displayValue = "";
 let history = [];
 let log = document.getElementById("displayHistory");
 
-//get the button that is clicked
+//code
 for(btn of buttons) {
-    //console.log(btn);
-    //btn = btn.innerText;
-    //console.log(btn);
 
     //get the button that is clicked
     btn.addEventListener('click', (b) => {
         //get text
         buttonVal = b.target.innerText;
-        // console.log(buttonVal);
 
-        //displayValue for operating
-        //displayValue += buttonVal;
-
-        //display text to textbox
-        //display.value = displayValue;
-
+        //handle exponent
         if(buttonVal === "^") buttonVal = "**";
 
         //clear
@@ -33,13 +25,8 @@ for(btn of buttons) {
             display.value = eval(displayValue);
 
             history.push(displayValue +"=" +display.value);
-            // console.log(history);
 
-            displayValue = "";
-            //display.value = "";
-
-            // log.innerHTML = "<ul>" +history +"<ul>";
-            
+            displayValue = "";    
 
         } else if(buttonVal === "LOGS") {
             let temp = document.getElementById("displayHistory");
@@ -47,6 +34,7 @@ for(btn of buttons) {
             let ul = document.createElement("ul");
             ul.id = "displayHistory";
 
+            //logs
             history.forEach(element => {
                 let li = document.createElement("li");
                 li.innerText = element;
@@ -62,7 +50,5 @@ for(btn of buttons) {
             displayValue += buttonVal;
             display.value = displayValue;
         }
-
-        // console.log(displayValue);
     })
 }
